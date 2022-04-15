@@ -24,6 +24,13 @@
                             Contact Us
                         </a>
                     </li>
+
+                    <li class="nav-item p-1">
+                        <a href="#mailInput" class="nav-link">
+                            Write a mail to your subscribers
+                        </a>
+                    </li>
+
                     <li class="nav-item p-1">
                         <a href="#" class="nav-link">
                             Take a peek at the emails you've already sent
@@ -32,23 +39,64 @@
                 </ul>
             </div>
         </div>
-    </nav> 
+    </nav>
 
-    <section id="mailInput">
-        <div class="container-lg">
-            <div class="text-center text-light">
-                <h2>Hello, UserName!</h2>
-                <p class="lead"><span class="text-warning">Note: Please don't send bogus emails. Also, refrain from using inappropriate language.</span></p>
+    <section class="bg-dark text-light p-5 text-center">
+        <div class="container">
+            <div class="d-sm-flex">
+                <div>
+                    <h1>Hello, <span class="text-warning">UserName!</span></h1>
+                    <p class="lead">
+                        Welcome to the dashboard, You can either write a message to your subscribers or look over the messages you've already sent.                     </p>
+                </div>
+                <img class="img-fluid" src="images/newsletter.svg" width="40%">
             </div>
         </div>
+    </section>
 
-        <div class="row justify-content-center my-5">
-            <div class="col-lg-6">
+    <section id="mailInput" class="text-center">
+        <div class="container-lg p-5">
+            <div class="text-center text-light">
+                <h2>
+                    Write a mail
+                    <p class="lead">
+                        Note: Please don't send bogus emails. Also, refrain from using inappropriate language.
+                    </p>
+                </h2>
+            </div>
+        </div>
+        <div class="row justify-content-center my-2">
+            <div class="col-lg-10 col-md-10 col-sm-10">
                 <form class="text-center text-light">
-                    <label for="mailArea" class="form-label">Paste in the text that will be emailed to your subscribers.</label>
-                    <textarea class="form-control" id="mailArea" rows="10"></textarea>
-                    <input class="btn btn-secondary w-100" type="submit" value="SEND">
+                    <div class="row mb-3">
+                        <label for="eventName" class="col-sm-2 col-form-label">Event Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control col-sm-2 col-form" id="eventName" placeholder="e.g. Event Name">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="eventDate" class="col-sm-2 col-form-label">Event Date</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" id="eventDate">
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <label for="eventTime" class="col-sm-2 col-form-label">Event Time</label>
+                        <div class="col-sm-10">
+                            <input type="time" class="form-control" id="eventTime">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="description" class="col-sm-2 col-form-label">Event Description</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="description" rows="10"></textarea>
+                        </div>
+                    </div>
                 </form>
+                <input class="btn btn-secondary w-50" type="submit" value="SEND">
             </div>
         </div>
     </section>
